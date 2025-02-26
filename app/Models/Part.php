@@ -12,4 +12,9 @@ class Part extends Model
         'application',
         'description',
     ];
+
+    public function competitorParts()
+    {
+        return $this->hasMany(CompetitorPart::class);
+    }
 }

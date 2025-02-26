@@ -19,7 +19,7 @@ class PartResource extends Resource
 {
     protected static ?string $model = Part::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-truck';
 
     public static function form(Form $form): Form
     {
@@ -33,7 +33,8 @@ class PartResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('part_number')->label('CHT Hub')
+                TextColumn::make('part_number')->label('CHT Hub'),
+                TextColumn::make('description')
             ])
             ->filters([
                 //
